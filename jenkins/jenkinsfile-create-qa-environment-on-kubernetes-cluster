@@ -4,7 +4,7 @@ pipeline {
         PATH=sh(script:"echo $PATH:/usr/local/bin", returnStdout:true).trim()
         APP_NAME="petclinic"
         AWS_REGION="us-east-1"
-        ANS_KEYPAIR="tr-${APP_NAME}-qa.key"
+        ANS_KEYPAIR="matt-${APP_NAME}-qa.key"
         ANSIBLE_PRIVATE_KEY_FILE="${JENKINS_HOME}/.ssh/${ANS_KEYPAIR}"
         ANSIBLE_HOST_KEY_CHECKING="False"
     }
