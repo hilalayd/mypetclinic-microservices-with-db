@@ -6,11 +6,11 @@ module "iam" {
   source = "./modules/IAM"
 }
 
-resource "aws_security_group" "matt-kube-mutual-sg" {
+resource "aws_security_group" "matt1-kube-mutual-sg" {
   name = "kube-mutual-sec-group-for-matt1"
 }
 
-resource "aws_security_group" "matt-kube-worker-sg" {
+resource "aws_security_group" "matt1-kube-worker-sg" {
   name = "kube-worker-sec-group-for-matt1"
   ingress {
     protocol = "tcp"
@@ -51,7 +51,7 @@ resource "aws_security_group" "matt-kube-worker-sg" {
   }
 }
 
-resource "aws_security_group" "matt-kube-master-sg" {
+resource "aws_security_group" "matt1-kube-master-sg" {
   name = "kube-master-sec-group-for-matt1"
 
   ingress {
@@ -128,7 +128,7 @@ resource "aws_security_group" "matt-kube-master-sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
   tags = {
-    Name = "kube-master-secgroup"
+    Name = "kube-master-secgroup1"
   }
 }
 
